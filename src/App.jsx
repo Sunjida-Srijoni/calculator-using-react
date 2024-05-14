@@ -11,40 +11,40 @@ function App() {
       <div className="calculator">
         <form action="">
           <div className='display'>
-            <input type='text'></input>
+            <input type='text' value={value}></input>
           </div>
           <div>
-            <input type='button' value="AC"></input>
-            <input type='button' value="DE"></input>
+            <input type='button' value="AC" onClick={e => setValue('')}></input>
+            <input type='button' value="DE" onClick={e => setValue(value.slice(0,-1))}></input>
             <input type='button' value="."></input>
             <input type='button' value="/"></input>
             
           </div>
           <div>
-            <input type='button' value="7"></input>
-            <input type='button' value="8"></input>
-            <input type='button' value="9"></input>
-            <input type='button' value="*"></input>
+            <input type='button' value="7" onClick={e => setValue(value + e.target.value)}></input>
+            <input type='button' value="8" onClick={e => setValue(value + e.target.value)}></input>
+            <input type='button' value="9" onClick={e => setValue(value + e.target.value)}></input>
+            <input type='button' value="*" onClick={e => setValue(value + e.target.value)}></input>
             
           </div>
           <div>
-            <input type='button' value="4"></input>
-            <input type='button' value="5"></input>
-            <input type='button' value="6"></input>
-            <input type='button' value="+"></input>
+            <input type='button' value="4" onClick={e => setValue(value + e.target.value)}></input>
+            <input type='button' value="5" onClick={e => setValue(value + e.target.value)}></input>
+            <input type='button' value="6" onClick={e => setValue(value + e.target.value)}></input>
+            <input type='button' value="+" onClick={e => setValue(value + e.target.value)}></input>
             
           </div>
 
           <div>
-            <input type='button' value="1"></input>
-            <input type='button' value="2"></input>
-            <input type='button' value="3"></input>
-            <input type='button' value="-"></input>
+            <input type='button' value="1" onClick={e => setValue(value + e.target.value)}></input>
+            <input type='button' value="2" onClick={e => setValue(value + e.target.value)}></input>
+            <input type='button' value="3" onClick={e => setValue(value + e.target.value)}></input>
+            <input type='button' value="-" onClick={e => setValue(value + e.target.value)}></input>
             
           </div>
           <div>
-            <input type='button' value="00"></input>
-            <input type='button' value="0"></input>
+            <input type='button' value="00" onClick={e => setValue(value + e.target.value)}></input>
+            <input type='button' value="0" onClick={e => setValue(value + e.target.value)}></input>
             <input type='button' value="=" className='equal'></input>
            
             
