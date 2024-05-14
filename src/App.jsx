@@ -10,7 +10,7 @@ function App() {
     <div className="container">
       <div className="calculator">
         <form action="">
-          <div>
+          <div className='display'>
             <input type='text'></input>
           </div>
           <div>
@@ -45,7 +45,7 @@ function App() {
           <div>
             <input type='button' value="00"></input>
             <input type='button' value="0"></input>
-            <input type='button' value="="></input>
+            <input type='button' value="=" className='equal'></input>
            
             
           </div>
